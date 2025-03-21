@@ -1,13 +1,12 @@
 import React from 'react';
 import useTheme from '../context/theme';
-
-
-
 export default function ThemeBtn() {
 
     const { themeMode, darkTheme, lightTheme } = useTheme();
+    console.log("kya theme mod aa rha hai " +themeMode);
 
     const onchangeBtn = (e) => {
+
              const darkModeStatus = e.currentTarget.checked;
         if(darkModeStatus){
             darkTheme();
@@ -16,8 +15,7 @@ export default function ThemeBtn() {
         lightTheme();
     }
 }   
-
-    
+    console.log('what is final thme mod'+themeMode);
 
     return (
         <label className="relative inline-flex items-center cursor-pointer">
